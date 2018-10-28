@@ -58,7 +58,7 @@ public class SerialPreference {
         return false;
     }
 
-    private synchronized Hashtable<String, ? extends Serializable> read(Context context, String key) {
+    public synchronized Hashtable<String, ? extends Serializable> read(Context context, String key) {
         String list = getSharedPreference(context).getString(key, "");
         Serializable object = null;
         if (!TextUtils.isEmpty(list)) {
